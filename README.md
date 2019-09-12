@@ -7,12 +7,18 @@ From Woodlands to JB Sentral. and back, depending on which function you choose.
 
 For starters, refer to https://codeburst.io/a-guide-to-automating-scraping-the-web-with-javascript-chrome-puppeteer-node-js-b18efb9e9921
 
-*Required*
+**Required**
 
 Need to install puppeteer node package.
 >npm install --save puppeteer
 
-Then comment out either functions to go or return.
+**Execution**
+In the file ktm.js, comment out either functions to go or return. So that you don't run both commands. That's crazy.
+
+Then execute the file ktm.js: 
+>node ktm.js
+
+Your Chrome browser should start and you can see what happens.
 
 
 **Future Improvements**
