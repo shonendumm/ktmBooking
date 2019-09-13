@@ -9,14 +9,18 @@ For starters, refer to https://codeburst.io/a-guide-to-automating-scraping-the-w
 
 **Required**
 
-Need to install puppeteer node package.
+Need to install puppeteer module either globally or in your project directory.
 >npm install --save puppeteer
+
+Refer to https://github.com/GoogleChrome/puppeteer for more info.
 
 **Execution**
 
-In the file ktm.js, comment out either functions to go or return. So that you don't run both commands. That's crazy.
+Only use ktm.js, the rest are code examples I was learning from.
 
-Then execute the file ktm.js: 
+In the file ktm.js, comment out either functions to go or return. So that you don't run both commands. That's crazy. Or maybe you don't have to do this.
+
+Then, just execute the file ktm.js: 
 >node ktm.js
 
 Your Chrome browser should start and you can see what happens.
@@ -30,10 +34,11 @@ This way, you can see more of the website.
 
 **Future Improvements**
 
-***Check results***
+***Check results (WIP)***
 
 To add dom query selector something like that to see whether any results come back.
 If no results, then try another timing or another date.
+
 
 ***Console Query***
 
