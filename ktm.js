@@ -81,7 +81,7 @@ async function start() {
             } else { // else if x.includes(positive results) TODO:
             console.log('success!');
             repeat = false; // successful results TODO: not really captured because not evaluated
-            };        
+            };
         };
     }
 
