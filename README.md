@@ -21,6 +21,12 @@ Then execute the file ktm.js:
 
 Your Chrome browser should start and you can see what happens.
 
+**Known Issues**
+
+When buying the ticket, the browser window might be too short to click the "pay" button.
+Then you need to zoom out by pressing ctrl + '-', or how you usually zoom out.
+This way, you can see more of the website.
+
 
 **Future Improvements**
 

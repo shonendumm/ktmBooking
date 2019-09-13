@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
-const dateGo = '12/10/2019'; // date of going 
-const dateReturn = '12/10/2019'; // date of coming back 
+const dateGo = '06/10/2019'; // date of going 
+const dateReturn = dateGo; // date of coming back 
 const timeGo = 2; // 1 = 12am-7am, 2 = 7am-12pm, 3 = 12pm-7pm, 4 = 7pm-12am
 const timeReturn = 3; // 1 = 12am-7am, 2 = 7am-12pm, 3 = 12pm-7pm, 4 = 7pm-12am
 
@@ -12,7 +12,7 @@ async function goKTM() {
     const browser = await puppeteer.launch({headless:false});
     const page = await browser.newPage();
     await page.goto('https://eticket.ktmb.com.my/eticket');
-    await page.setViewport({width: 1000, height:800});
+    await page.setViewport({width: 1200, height:1200});
 
     await page.waitFor(1000);
     
