@@ -2,19 +2,19 @@ const puppeteer = require('puppeteer');
 
 
 const dateGo = '12/10/2019'; // date of going JB must be xx/xx/xx
-const dateGoArray = ['06/10/2019','07/10/2019']; // list of potential dates to go
+const dateGoArray = ['12/10/2019','06/10/2019','07/10/2019']; // list of potential dates to go
 
 const dateReturn = dateGo; // date of coming back
-const dateReturnArray = dateGoArray; // list of dates coming back
+const dateReturnArray = dateGoArray; // list of dates coming back. Same since day trip
 
 const timeGo = 1; // 1: all timings, 2: 12am-7am, 3: 7am-12pm, 4: 12pm-7pm, 5: 7pm-12am
 const timeReturn = 1; // not sure if correct TODO:
 
 let repeat = true; // for implementing user input later, maybe
 
-// comment out function depending on going or coming back. Can run both too.
-// start();
-back();
+// comment out function depending on going or coming back. Can run both too. Not advisable though
+start();
+// back();
 
 // should ask for user input to enter list of dates TODO:
 
@@ -80,9 +80,9 @@ async function start() {
         let x = 0; // reinitialise it everytime.
         x = await goKTM(dateGoArray[i]);
         if (x.includes('Opps')) {
-            console.log(`No train for ${dateGoArray[i]}, pls try again.`);
+            console.log(`No going train for ${dateGoArray[i]}`);
         } else { // else if x.includes(positive results)
-        console.log(`Success! Got train for ${dateGoArray[i]}, go book it`);
+        console.log(`Success! Got going train for ${dateGoArray[i]}, go book it`);
         repeat = false; 
         };
     };
@@ -172,7 +172,7 @@ async function back() {
         repeat = false; 
         };
     };
-
+}
 
 // scrape().then((value) => {
 //     console.log(value);
