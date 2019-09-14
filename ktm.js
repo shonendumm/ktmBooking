@@ -2,8 +2,7 @@ const puppeteer = require('puppeteer');
 
 
 const dateGo = '12/10/2019'; // date of going JB must be xx/xx/xx
-
-const dateGoArray = ['06/10/2019','07/10/2019'];
+const dateGoArray = ['06/10/2019','07/10/2019']; // list of potential dates to go
 
 const dateReturn = dateGo; // date of coming back 
 const timeGo = 1; // 1 = all, 2 = 12am-7am, 3 = 7am-12pm, 4 = 12pm-7pm, 5 = 7pm-12am
@@ -81,9 +80,9 @@ async function start() {
         var x = 0; // reinitialise it everytime.
         x = await goKTM(dateGoArray[i]);
         if (x.includes('Opps')) {
-            console.log('No train, pls try again.');
+            console.log(`No train for ${dateGoArray[i]}, pls try again.`);
         } else { // else if x.includes(positive results)
-        console.log('Success! Got train, go book it');
+        console.log(`Success! Got train for ${dateGoArray[i]}, go book it`);
         repeat = false; 
         };
     };
