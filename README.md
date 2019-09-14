@@ -1,4 +1,4 @@
-*what is this?*
+**what is this?**
 
 An automation script made with JS, node and puppeteer to help you book KTM train tickets. 
 From Woodlands to JB Sentral. and back, depending on which function (start() or back()) you choose. 
@@ -26,6 +26,7 @@ Only use ktm.js, the rest are code examples I was learning from.
 
 In the file ktm.js, comment out either functions: 
 > start()
+
 > //back()
 
 By default, it's start().
