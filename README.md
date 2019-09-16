@@ -40,6 +40,18 @@ Your Chrome browser should start and you can see what happens. You can also try 
 - After getting train results, user has to book manually, i.e. select the exact timing they want, credit card details, etc.
 
 ## Known Issues
+
+### TypeError: Cannot read property 'innerText' of null
+This happens because the train timings returning from KTM's website took longer than our code which tries to read the page.
+
+Solution: Adjust wait time longer if you get this error about unhandled Promise. "TypeError: Cannot read property 'innerText' of null"
+
+>await page.waitFor(12000); // increase to a higher figure, 13000, 14000, etc.
+
+I think this happens when you ask for "All timings", or something that makes the KTM server more busy.
+
+
+### Window too small to click 'buy'
 When buying the ticket, the browser window might be too short to click the "pay" button.
 You need to zoom out by pressing ctrl + '-', or how you usually zoom out.
 This way, you can see more of the website.
@@ -57,4 +69,4 @@ To learn how to host this online or serverless, so that user can run this from a
 
 
 
-\* *improvements will be considered based on whether it will save time/effort in the long run.
+*improvements will be considered based on whether it will save time/effort in the long run.
